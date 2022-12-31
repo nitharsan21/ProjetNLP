@@ -8,6 +8,11 @@ from generator.gpt2.src import sample, encoder, model
 import json
 import numpy as np
 
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
+import tensorflow.c
+
 class GPT2Generator:
 
     def __init__(self,  generate_num=60, temperature=0.4, top_k=40, top_p=0.9):
@@ -16,8 +21,8 @@ class GPT2Generator:
         self.top_k = top_k
         self.top_p = top_p
 
-        self.model_name = "model_v4"
-        self.model_dir = "generator/gpt2/models"
+        self.model_name = "124M"
+        self.model_dir = "generator/simple/models"
         self.checkpoint_path = os.path.join(self.model_dir, self.model_name)
 
         models_dir = os.path.expanduser(os.path.expandvars(self.model_dir))

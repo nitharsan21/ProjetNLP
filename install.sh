@@ -1,5 +1,5 @@
-MODELS_DIRECTORY=generator/gpt2/models
-MODEL_VERSION=model_v4
+MODELS_DIRECTORY=generator/simple/models
+MODEL_VERSION=124M
 MODEL_NAME=model-200
 DOWNLOAD_URL=https://students.cs.byu.edu/~nickwalt
 

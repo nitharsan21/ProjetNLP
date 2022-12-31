@@ -54,7 +54,7 @@ def select_game():
     return context, prompt
 
 def instructions():
-    text = "\nAI Dungeon 2 Instructions:"
+    text = "\nAI Dungeon ESGI Instructions:"
     text += '\n* Enter actions starting with a verb ex. "go to the tavern" or "attack the orc."'
     text += '\n* To speak enter \'say "(thing you want to say)"\' or just "(thing you want to say)" '
     text += '\n* Enter "revert" for any action if you want to undo the last action and result.'
