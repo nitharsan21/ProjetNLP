@@ -24,6 +24,6 @@ def AI():
     # RETOURNE LA REPONSE DE L'IA
     return jsonify({'AImsg': result})
 
-
-app.debug = True
-app.run()
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
