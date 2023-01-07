@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+    <title>AI ESGI DUNGEON</title>
+</head>
+<body>
+
+
+<!--    <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+<!--        <h1>AI DUNGEON BY ESGI</h1>-->
+<!--    </nav>-->
+
+
+    <section style="background-color: #996c4d;">
+      <div class="container py-5">
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12 col-lg-12 col-xl-12">
+
+            <div class="card" id="chat1" style="border-radius: 15px;">
+              <div
+                class="card-header d-flex justify-content-between align-items-center p-3 bg-info text-white border-bottom-0"
+                style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                <i class="fas fa-angle-left"></i>
+                <p class="mb-0 fw-bold" style="font-family: 'Brush Script MT'; font-size: 50px;">Your adventure</p>
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="card-body">
+                  <!-- Début bulles -->
+                  <div id="general_chat">
+
+                  <!-- Bulle de l'IA -->
+
+                    <div class="d-flex flex-row justify-content-start mb-4">
+                      <img src="static/image/anastasia-robot-bard.jpg" style="width: 45px; height: 100%; border-radius: 50%">
+                      <div class="p-3 ms-3" style="margin-left: 5px; border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
+                        <p class="small mb-0">Hi adventurer ! My name is AI-thor. I will be your Game Master during this adventure. Let me introduce a story...</p>
+                      </div>
+                    </div>
+
+                      <!-- Bulle de l'utilisateur -->
+
+<!--                    <div class="d-flex flex-row justify-content-end mb-4">-->
+<!--                      <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">-->
+<!--                        <p class="small mb-0">Thank you, I really like your product.</p>-->
+<!--                      </div>-->
+<!--                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"-->
+<!--                        style="width: 45px; height: 100%;">-->
+<!--                    </div>-->
+
+                  </div>
+                <!-- Fin des bulles -->
+
+                <div class="form-outline">
+                  <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                  <label class="form-label" for="textAreaExample">Type your message</label>
+                    <div class="row">
+                        <div class="col-md-9 col-lg-9 col-xl-9">
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-xl-3">
+                            <div class="row">
+                                <div class="col-md-4 col-lg-4 col-xl-4">
+                                    <button id="speak" onclick=chat(this.value) value="SPEAK" type="button" class="btn btn-primary">Speak</button>
+                                </div>
+                                <div class="col-md-4 col-lg-4 col-xl-4">
+                                    <button id="do" onclick=chat(this.value) value="DO" type="button" class="btn btn-primary">Do</button>
+                                </div>
+                                <div class="col-md-4 col-lg-4 col-xl-4">
+                                    <button id="tell" onclick=chat(this.value) value="TELL" type="button" class="btn btn-primary">Tell</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+</body>
+</html>
