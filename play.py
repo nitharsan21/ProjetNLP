@@ -63,11 +63,7 @@ def instructions():
 
 def play_aidungeon_2():
 
-    save_story = input("Help AIDungeon by letting us store your adventure to improve the model? (Y/n) ")
-    if save_story.lower() in ["no", "No", "n"]:
-        upload_story = False
-    else:
-        upload_story = True
+    upload_story = True
 
     print("\nInitializing AI Dungeon! (This might take a few minutes)\n")
     generator = GPT2Generator()

@@ -53,7 +53,6 @@ def player_died(text):
     return False
 
 def player_won(text):
-
     won_phrases = ["live happily ever after", "you live forever"]
     for phrase in won_phrases:
         if phrase in text:

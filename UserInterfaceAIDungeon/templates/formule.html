@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+.r-13awgt0 {
+    flex: 1 1 0%;
+}
+
+.css-1dbjc4n {
+    -webkit-box-align: stretch;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    align-items: stretch;
+    border: 0px solid black;
+    box-sizing: border-box;
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    flex-shrink: 0;
+    margin: 10px;
+    min-height: 0px;
+    min-width: 0px;
+    padding: 0px;
+    position: relative;
+    z-index: 0;
+}
+
+div {
+    display: block;
+}
+
+.r-1d5kdc7 {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    flex-direction: column-reverse;
+}
+
+.r-18u37iz {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,segoe ui,roboto,oxygen,ubuntu,cantarell,fira sans,droid sans,helvetica neue,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+</style>
+<body style="background-color: black";>
+<div class="css-1dbjc4n r-150rngu r-eqz5dr r-16y2uox r-1wbh5a2 r-11yh6sk r-1rnoaur r-1sncvnh" style="display: flex;">
+    <div class="css-1dbjc4n r-16y2uox" style="display: flex;">
+        <div class="css-1dbjc4n r-150rngu r-eqz5dr r-16y2uox r-1wbh5a2 r-11yh6sk r-1rnoaur r-1sncvnh" style="display: flex;">
+            <div class="css-1dbjc4n r-16y2uox" style="display: flex; padding-bottom: 32px;">
+                <div dir="auto" tabindex="0" class="css-901oao r-1loqt21 r-1wbh5a2 r-1xnzce8 r-13qz1uu" style="align-self: flex-start; color: rgb(224, 224, 224); font-family: helvetica; font-size: 14px; line-height: 19.6px; margin-bottom: 16px;">
+                    Pick a setting...
+                </div>
+
+
+                {% for set in setting %}
+
+                    <div class="css-1dbjc4n r-1awozwy r-18u37iz r-1wbh5a2" style="margin-bottom: 8px;">
+                        <div aria-label="Scenario Option" role="button" tabindex="0" class="css-18t94o4 css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-1777fci r-1otgn73 r-1i6wzkk r-lrvibr" style="background-color: rgb(59, 59, 59); border-radius: 5px; display: flex; height: 40px; max-width: 450px; padding: 8px; transition-duration: 0s; width: auto;">
+                            <div dir="auto" class="css-901oao css-cens5h" style="-webkit-line-clamp: 2; color: rgb(224, 224, 224); font-family: HelveticaNeue-Light, Helvetica, sans-serif, Classic, alegreya_regular; font-size: 24px; padding-right: 8px; padding-left: 8px; text-transform: uppercase;">
+                            {{ set.ids }}
+                            </div>
+                        </div>
+                        <div dir="auto" tabindex="0" class="css-901oao r-1loqt21 r-1wbh5a2 r-1xnzce8 r-13qz1uu" style="align-self: center; color: rgb(224, 224, 224); font-family: helvetica; font-size: 14px; letter-spacing: 0.3px; line-height: 19.6px; margin-left: 8px;">
+                            {{ set.setting }}
+                        </div>
+                    </div>
+                {% endfor %}
+
+                <form role="form" action="/setting" method="POST" style="font-size:18px;  margin-left:510px; background-color:lightskyblue;  position: fixed;
+  top: 35%;
+  left: 35%;
+  margin-top: -50px;
+  margin-left: -50px;width: 50%">
+                <div class="css-1dbjc4n r-1awozwy r-18u37iz r-1777fci r-13qz1uu" style="align-self: center; background-color: rgb(18, 18, 18); border-color: rgb(224, 224, 224); border-radius: 8px; border-width: 1px; margin-bottom: 10px; max-height: 500px; padding-right: 8px; padding-left: 8px;">
+                    <textarea id="response" name="response" autocorrect="on" maxlength="4000" placeholder="..." autocapitalize="sentences" autocomplete="on" dir="auto" rows="1" spellcheck="true" aria-label="Input bar" class="css-11aywtz r-13awgt0 r-1777fci r-snp9zz" style="background-color: rgb(18, 18, 18); border-radius: 8px; color: rgb(224, 224, 224); font-family: HelveticaNeue-Light, Helvetica, sans-serif, Classic, alegreya_regular; font-size: 20px; padding: 12px 8px 8px; vertical-align: top;">
+                    </textarea><button style="margin-left: 5em;" type="submit" class="btn btn-success"> submit </button>
+                    <div aria-label="Submit" role="presentation" tabindex="0" class="css-1dbjc4n r-1loqt21 r-1otgn73 r-1i6wzkk r-lrvibr" style="align-self: center; display: flex; margin: 4px; padding: 4px; transition-duration: 0s;"><div role="presentation" class="css-1dbjc4n r-1awozwy r-eqz5dr r-1777fci">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paper-plane" class="svg-inline--fa fa-paper-plane fa-lg " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" color="#e0e0e0">
+<!--                        <button style="margin-left: 5em;" type="submit" class="btn btn-success"> submit </button>-->
+                        </svg>
+                    </div>
+                    </div>
+                </div>
+                </form>
+
+
+</body>
+</html>
